@@ -10,20 +10,34 @@
     <style>
         html,
         body {
-            height: 150vh;
+            height: 100vh;
         }
-
+        header{
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section{
+            height:  80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         #map {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 70%;
+            width: 60%;
+            height: 100%;
         }
+    
     </style>
 </head>
 
 <body>
-    <div id="map"></div>
+    <header>find my doctor for ADHD</header>
+    <section><div id="map"></div></section>
+    
     <script>
         let user_loc = navigator.geolocation;
 
@@ -47,6 +61,22 @@
             var marker = new mappls.Marker({
                 map: map,
                 position: { "lat": lat, "lng": long }
+            });
+            var marker = new mappls.Marker({
+                map: map,
+                position: { "lat": lat+0.0025 , "lng":long+0.0025  }
+            });
+            var marker = new mappls.Marker({
+                map: map,
+                position: { "lat": lat-0.0025 , "lng":long+0.0025  }
+            });
+            var marker = new mappls.Marker({
+                map: map,
+                position: { "lat": lat+0.0025 , "lng":long-0.0025  }
+            });
+            var marker = new mappls.Marker({
+                map: map,
+                position: { "lat": lat-0.0025 , "lng":long-0.0025  }
             });
         }
 
