@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #75e6a4;
+  --primary-color-dark: #2bc27e;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+a{
+    text-decoration: none;
+}
+.link a {
+  text-decoration: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+section{
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+section h1{
+
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+section p{
+    margin-bottom: 2rem;
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <a href="./index.html"><div class="nav__logo">listenMyMind</div></a>
+        <ul class="nav__links">
+          <!-- <li class="link"><a href="#">Home</a></li>
+          <li class="link"><a href="#">AboutUs</a></li>
+          <li class="link"><a href="#">Contact</a></li> -->
+        </ul>
+      </nav>
+
+      <section>
+        <h1>ADHD</h1>
+        <p>Attention Deficit Hyperactivity Disorder (ADHD) is a neurodevelopmental condition characterized by persistent patterns of inattention, hyperactivity, and impulsivity that can interfere with daily functioning and development. Individuals with ADHD may struggle with focusing on tasks, organizing activities, sitting still, or controlling impulses. While often diagnosed in childhood, ADHD can continue into adulthood, affecting various aspects of life, including education, work, and relationships. Treatment typically includes behavioral therapy, lifestyle changes, and medication to help manage symptoms.</p>
+        <a href="./adhd"><button class="btn">MORE</button></a>
+      </section>
+      <hr>
+      <section>
+        <h1>AUTISM</h1>
+        <p>Autism, or Autism Spectrum Disorder (ASD), is a developmental condition that affects communication, behavior, and social interaction. People with autism may have challenges in understanding social cues, forming relationships, or engaging in typical communication patterns. They may also exhibit repetitive behaviors or have specific, intense interests. Autism is a spectrum disorder, meaning it affects individuals differently and to varying degrees. Early diagnosis and intervention, including behavioral therapy and support, can significantly improve outcomes and help individuals lead fulfilling lives.</p>
+        <a href="./autism/index.html"><button class="btn">MORE</button></a>
+      </section>
+      <hr>
+      <section>
+        <h1>OCD</h1>
+        <p>Obsessive-Compulsive Disorder (OCD) is a mental health condition characterized by persistent, unwanted thoughts (obsessions) and repetitive behaviors or mental acts (compulsions) performed to relieve the anxiety caused by these thoughts. Common obsessions include fears of contamination, harm, or the need for symmetry, while compulsions may involve excessive cleaning, checking, counting, or arranging. These behaviors can become time-consuming and interfere with daily life. OCD is treatable through therapy, particularly cognitive-behavioral therapy (CBT), and medication to help manage symptoms and improve quality of life.</p>
+        <a href="./ocd/index.html"><button class="btn">MORE</button></a>
+      </section>
+      <hr>
+    </div>
+</body>
+</html>

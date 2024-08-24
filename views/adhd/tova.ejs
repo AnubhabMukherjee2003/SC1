@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOVA Test</title>
+    
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#test-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    background-color: #240b96;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+
+
+#box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    /* top: 0; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    display: none;
+}
+#item{
+    width: 70px;
+    height: 70px;
+    background-color: #240b96;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#results {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div id="test-area">
+        <div id="box">
+            <div id="item"></div>
+        </div>
+    </div>
+    <!-- <div id="results"></div> -->
+    <script >
+        document.addEventListener('DOMContentLoaded', main);
+
+function main(){
+    const box = document.getElementById('box');
+    const item = document.getElementById('item');
+    // const results = document.getElementById('results');
+    let startTime, endTime;
+    let totalPresses = 0;
+    let responseTimes = [];
+    let showBoxTimeout, hideBoxTimeout;
+
+    function showBox() {
+        box.style.display = 'block';
+        startTime = new Date().getTime();
+        hideBoxTimeout = setTimeout(hideBox, 100);
+    }
+
+    function hideBox() {
+        box.style.display = 'none';
+        showBoxTimeout = setTimeout(showBox, Math.random() * 3000 + 3000);
+    }
+
+    function stopMain() {
+        clearTimeout(showBoxTimeout);
+        clearTimeout(hideBoxTimeout);
+        document.removeEventListener('keydown', keydownHandler);
+        main2(responseTimes)
+    }
+
+    function keydownHandler(event) {
+        if (event.key === 'Enter') {
+            // totalPresses++;
+            if (totalPresses++ == 10) {
+                stopMain();
+                return;
+            }
+            endTime = new Date().getTime();
+            const reactionTime = endTime - startTime;
+            responseTimes.push(reactionTime);
+            // results.innerHTML += `Reaction Time: ${reactionTime} ms<br>`;
+        }
+    }
+
+    document.addEventListener('keydown', keydownHandler);
+
+    showBox(); 
+}
+
+function main2(responseTimes){
+    box.style.display = 'block';
+    item.style.display = 'none';
+    const sum = responseTimes.reduce((acc, curr) => acc + curr, 0);
+    console.log(sum);
+    // box.innerHTML = `Sum of Response Times: ms`;
+    box.innerHTML = `<h1 style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center
+"> Your avg time response time ${sum/10} ms</h1>`;
+}
+    </script>
+</body>
+</html>
