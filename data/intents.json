@@ -1,0 +1,276 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "hello",
+                "hi",
+                "hey",
+                "hey there",
+                "hello there",
+                "hi there"
+            ],
+            "responses": [
+                "Hello!",
+                "Hi there!",
+                "Hey! How can I help you today?"
+            ]
+        },
+        {
+            "tag": "services",
+            "patterns": [
+                "What services do you offer?",
+                "Tell me about your services",
+                "services"
+            ],
+            "responses": [
+                "We offer various services to support mental health. Redirecting you to the services page..."
+            ],
+            "follow_up": {
+                "yes_patterns": [
+                    "yes",
+                    "sure"
+                ],
+                "no_patterns": [
+                    "no",
+                    "not now"
+                ],
+                "yes_response": "Great! Redirecting now...",
+                "no_response": "Okay, let me know if you need anything else.",
+                "redirect": "/services"
+            }
+        },
+        {
+            "tag": "ADHD",
+            "patterns": [
+                "Tell me about ADHD",
+                "What is ADHD?",
+                "I want to know about ADHD",
+                "ADHD"
+            ],
+            "responses": [
+                "ADHD stands for Attention Deficit Hyperactivity Disorder. It's a condition characterized by symptoms such as inattention, hyperactivity, and impulsivity. Would you like to see the ADHD section of our website?"
+            ],
+            "follow_up": {
+                "yes_patterns": [
+                    "yes",
+                    "show me",
+                    "sure",
+                    "go ahead"
+                ],
+                "no_patterns": [
+                    "no",
+                    "not now",
+                    "later"
+                ],
+                "yes_response": "Navigating to the ADHD page...",
+                "no_response": "Okay, let me know if you need anything else.",
+                "redirect": "/adhd-page"
+            }
+        },
+        {
+            "tag": "PTSD",
+            "patterns": [
+                "Tell me about PTSD",
+                "What is PTSD?",
+                "I want to know about PTSD",
+                "PTSD"
+            ],
+            "responses": [
+                "PTSD stands for Post-Traumatic Stress Disorder. It's a mental health condition triggered by a terrifying event, either by experiencing it or witnessing it. Would you like to see the PTSD section of our website?"
+            ],
+            "follow_up": {
+                "yes_patterns": [
+                    "yes",
+                    "show me",
+                    "sure",
+                    "go ahead"
+                ],
+                "no_patterns": [
+                    "no",
+                    "not now",
+                    "later"
+                ],
+                "yes_response": "Navigating to the PTSD page...",
+                "no_response": "Okay, let me know if you need anything else.",
+                "redirect": "/ptsd-page"
+            }
+        },
+        {
+            "tag": "OCD",
+            "patterns": [
+                "Tell me about OCD",
+                "What is OCD?",
+                "I want to know about OCD",
+                "OCD"
+            ],
+            "responses": [
+                "OCD stands for Obsessive-Compulsive Disorder. It's a mental health condition characterized by persistent, unwanted thoughts and repetitive behaviors. Would you like to see the OCD section of our website?"
+            ],
+            "follow_up": {
+                "yes_patterns": [
+                    "yes",
+                    "show me",
+                    "sure",
+                    "go ahead"
+                ],
+                "no_patterns": [
+                    "no",
+                    "not now",
+                    "later"
+                ],
+                "yes_response": "Navigating to the OCD page...",
+                "no_response": "Okay, let me know if you need anything else.",
+                "redirect": "/ocd-page"
+            }
+        },
+        {
+            "tag": "autism",
+            "patterns": [
+                "Tell me about autism",
+                "What is autism?",
+                "I want to know about autism",
+                "autism"
+            ],
+            "responses": [
+                "Autism, or Autism Spectrum Disorder (ASD), is a developmental disorder that affects communication and behavior. Would you like to see the autism section of our website?"
+            ],
+            "follow_up": {
+                "yes_patterns": [
+                    "yes",
+                    "show me",
+                    "sure",
+                    "go ahead"
+                ],
+                "no_patterns": [
+                    "no",
+                    "not now",
+                    "later"
+                ],
+                "yes_response": "Navigating to the autism page...",
+                "no_response": "Okay, let me know if you need anything else.",
+                "redirect": "/autism-page"
+            }
+        },
+        {
+            "tag": "bipolar",
+            "patterns": [
+                "Tell me about bipolar disorder",
+                "What is bipolar disorder?",
+                "I want to know about bipolar disorder",
+                "bipolar disorder"
+            ],
+            "responses": [
+                "Bipolar Disorder is a mental health condition characterized by extreme mood swings that include emotional highs (mania or hypomania) and lows (depression). Would you like to see the bipolar disorder section of our website?"
+            ],
+            "follow_up": {
+                "yes_patterns": [
+                    "yes",
+                    "show me",
+                    "sure",
+                    "go ahead"
+                ],
+                "no_patterns": [
+                    "no",
+                    "not now",
+                    "later"
+                ],
+                "yes_response": "Navigating to the bipolar page...",
+                "no_response": "Okay, let me know if you need anything else.",
+                "redirect": "/bipolar-page"
+            }
+        },
+        {
+            "tag": "general",
+            "patterns": [
+                "Hello",
+                "Hi",
+                "Hey"
+            ],
+            "responses": [
+                "Hello! How can I assist you today?"
+            ]
+        },
+        {
+            "tag": "questions",
+            "questions": [
+                "Do you often find it difficult to pay attention?",
+                "Do you frequently experience flashbacks or nightmares?",
+                "Do you have repetitive thoughts or behaviors?",
+                "Do you experience extreme mood swings?",
+                "Do you often feel anxious or worried?",
+                "Do you have trouble sleeping or feel restless?",
+                "Do you find it hard to control your anger?",
+                "Do you feel detached from reality or your surroundings?",
+                "Do you experience intense fear in social situations?",
+                "Do you feel persistent sadness or loss of interest in activities?"
+            ],
+            "suggestions": {
+                "ADHD": [
+                    "Try to organize your tasks with a planner.",
+                    "Take regular breaks during tasks to avoid burnout.",
+                    "Practice mindfulness to improve focus.",
+                    "Use tools like timers or apps to help manage time.",
+                    "Consider talking to a therapist specializing in ADHD.",
+                    "Break down tasks into smaller, manageable steps."
+                ],
+                "PTSD": [
+                    "Consider talking to a therapist about your experiences.",
+                    "Practice grounding techniques during flashbacks.",
+                    "Ensure you have a strong support system.",
+                    "Engage in relaxation techniques such as deep breathing.",
+                    "Avoid triggers when possible and create a safe environment.",
+                    "Consider joining a support group for PTSD."
+                ],
+                "OCD": [
+                    "Try to recognize and challenge your obsessive thoughts.",
+                    "Consider cognitive behavioral therapy (CBT).",
+                    "Set small, achievable goals to reduce compulsions.",
+                    "Avoid engaging in compulsive behaviors even if it's difficult.",
+                    "Talk to a therapist about exposure and response prevention (ERP).",
+                    "Practice stress-relief activities like exercise or meditation."
+                ],
+                "Bipolar Disorder": [
+                    "Keep track of your mood patterns.",
+                    "Consider talking to a psychiatrist about medication.",
+                    "Ensure you have a support system in place.",
+                    "Develop a daily routine to maintain stability.",
+                    "Engage in regular physical activity.",
+                    "Avoid alcohol and drugs as they can worsen symptoms."
+                ],
+                "Anxiety": [
+                    "Practice deep breathing exercises.",
+                    "Consider talking to a therapist about cognitive-behavioral therapy (CBT).",
+                    "Limit caffeine and alcohol consumption.",
+                    "Engage in regular physical activity to reduce stress.",
+                    "Try relaxation techniques like yoga or meditation.",
+                    "Create a daily schedule to manage tasks and reduce anxiety."
+                ],
+                "Depression": [
+                    "Reach out to a therapist or counselor for support.",
+                    "Engage in activities that you once enjoyed, even if they don't feel enjoyable right now.",
+                    "Stay connected with friends and family.",
+                    "Consider talking to a doctor about medication options.",
+                    "Set small, daily goals to help maintain a sense of accomplishment.",
+                    "Practice self-compassion and avoid negative self-talk."
+                ],
+                "Social Anxiety": [
+                    "Gradually expose yourself to social situations.",
+                    "Practice relaxation techniques before social events.",
+                    "Challenge negative thoughts about social situations.",
+                    "Consider cognitive-behavioral therapy (CBT).",
+                    "Engage in role-playing exercises to prepare for social interactions.",
+                    "Focus on building self-confidence and self-esteem."
+                ],
+                "No specific condition detected": [
+                    "It's great that you don't seem to match any specific conditions.",
+                    "If you still feel uneasy, consider consulting a mental health professional.",
+                    "Continue practicing self-care and monitoring your mental health.",
+                    "Engage in activities that promote mental well-being.",
+                    "Stay connected with loved ones and maintain a support network.",
+                    "Consider regular check-ins with a therapist for mental health maintenance."
+                ]
+            }
+        }
+    ]
+}
