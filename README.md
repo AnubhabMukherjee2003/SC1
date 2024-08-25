@@ -31,19 +31,19 @@
 - npm (Node Package Manager)
 
 ### Backend Setup
-#Flask
+##Flask
 ```bash
 cd backend
 python -m venv venv
 source venv/bin/activate
 ```
-#Express
+##Express
 ```bash
 cd ../express-backend
 npm install
 ```
 
-#Open index.html in your preferred browser to view the website.
-#Thank you for visiting MannBalance. We hope you find our resources helpful and engaging!
+Open index.html in your preferred browser to view the website.
+Thank you for visiting MannBalance. We hope you find our resources helpful and engaging!
 
 
