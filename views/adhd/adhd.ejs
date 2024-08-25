@@ -1,192 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-:root {
-  --primary-color: #75e6a4;
-  --primary-color-dark: #2bc27e;
-  --text-dark: #111827;
-  --text-light: #6b7280;
-  --white: #ffffff;
-}
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+    :root {
+      --primary-color: #75e6a4;
+      --primary-color-dark: #2bc27e;
+      --text-dark: #111827;
+      --text-light: #6b7280;
+      --white: #ffffff;
+    }
 
-.btn {
-  padding: 1rem 2rem;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  color: var(--white);
-  background-color: var(--primary-color);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
 
-.btn:hover {
-  background-color: var(--primary-color-dark);
-}
+    .btn {
+      padding: 1rem 2rem;
+      outline: none;
+      border: none;
+      font-size: 1rem;
+      color: var(--white);
+      background-color: var(--primary-color);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--white);
-}
+    .btn:hover {
+      background-color: var(--primary-color-dark);
+    }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+    body {
+      font-family: "Roboto", sans-serif;
+      background-color: var(--white);
+    }
 
-nav {
-  padding: 2rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-.nav__logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--primary-color);
-}
+    nav {
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
 
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-a{
-  text-decoration: none;;
-}
-.link a {
-  text-decoration: none;
-  color: var(--primary-color);
-  cursor: pointer;
-  transition: 0.3s;
-}
+    .nav__logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
 
-.link a:hover {
-  color: var(--primary-color-dark);
-}
-section{
-    max-width: 1200px;
-  margin-top: 2rem;
-  padding: 2rem;
-  border-radius: 5px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-}
-section h1{
+    .nav__links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
 
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--text-dark);
-}
-section p,pre{
-    margin-bottom: 2rem;
-  color: var(--text-light);
-  line-height: 1.75rem;
-}
+    a {
+      text-decoration: none;
+      ;
+    }
 
-    </style>
+    .link a {
+      text-decoration: none;
+      color: var(--primary-color);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .link a:hover {
+      color: var(--primary-color-dark);
+    }
+
+    section {
+      max-width: 1200px;
+      margin-top: 2rem;
+      padding: 2rem;
+      border-radius: 5px;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    }
+
+    section h1 {
+
+      margin-bottom: 1rem;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    section p,
+    pre {
+      margin-bottom: 2rem;
+      color: var(--text-light);
+      line-height: 1.75rem;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
+  <div class="container">
     <nav>
-        <div class="nav__logo">ADHD</div>
-        <ul class="nav__links">
-          <!-- <li class="link"><a href="#">Home</a></li> -->
-          <li class="link"><a href="adhd/diagnosis">Diagnosis</a></li>
-          <li class="link"><a href="adhd/treatment">Treatment</a></li>
-        </ul>
-        <a href="./index.html"><div class="nav__logo">listenMyMind</div></a>
+      <div class="nav__logo">ADHD</div>
+      <ul class="nav__links">
+        <!-- <li class="link"><a href="#">Home</a></li> -->
+        <li class="link"><a href="adhd/diagnosis">Diagnosis</a></li>
+        <li class="link"><a href="adhd/treatment">Treatment</a></li>
+      </ul>
+      <a href="./index.html">
+        <div class="nav__logo">manBalance</div>
+      </a>
 
-      </nav>
+    </nav>
 
-      <section>
-        <h1>ADHD</h1>
-        <p>Attention Deficit Hyperactivity Disorder (ADHD) is a neurodevelopmental disorder commonly diagnosed in children, but it can also persist into adulthood. It is characterized by symptoms such as inattention, hyperactivity, and impulsivity. These symptoms can significantly impact daily functioning and quality of life.
-          <br><br><br>
-
-        1. Symptoms of ADHD
+    <section>
+      <h1>ADHD</h1>
+      <p>ADHD, or Attention Deficit Hyperactivity Disorder, is a neurodevelopmental disorder characterized by symptoms
+        of inattention and hyperactivity or impulsivity. It is currently diagnosed in both children and adults, and its
+        impact can be seen in multiple aspects of life, such as home, school, and work.
         <br><br>
-        Inattention:
-        
-        Difficulty sustaining attention in tasks or play.
-        Frequent careless mistakes in schoolwork, work, or other activities.
-        Often seems not to listen when spoken to directly.
-        Fails to follow through on instructions and fails to finish schoolwork, chores, or duties.
-        Difficulty organizing tasks and activities.
-        Avoids, dislikes, or is reluctant to engage in tasks that require sustained mental effort.
-        Often loses items necessary for tasks and activities.
-        Easily distracted by extraneous stimuli.
-        Forgetfulness in daily activities.<br><br>
-        Hyperactivity:
-        
-        Fidgeting with hands or feet, or squirming in seat.
-        Leaving seat in situations where remaining seated is expected.
-        Running or climbing in situations where it is inappropriate.
-        Inability to play or engage in leisure activities quietly.
-        Often "on the go" or acting as if "driven by a motor."
-        Excessive talking.<br><br>
-        Impulsivity:
-        
-        Blurting out answers before questions have been completed.
-        Difficulty waiting for their turn.
-        Interrupting or intruding on others' conversations or activities.<br><br><br>
-        2. Causes of ADHD<br><br>
-        Genetics: ADHD often runs in families, indicating a genetic predisposition.
-        Brain Structure and Function: Differences in brain structure, particularly in areas involved in attention and impulse control, have been observed.<br><br>
-        Environmental Factors: Exposure to certain toxins during pregnancy, low birth weight, and premature birth may increase the risk of developing ADHD.<br><br>
-        Diet: Although not a direct cause, some studies suggest that certain food additives and sugar may exacerbate symptoms in some individuals.<br><br><br>
-        3. Diagnosis
-        Criteria: <br><br>Diagnosis is based on a thorough evaluation, including a clinical interview, behavior rating scales, and observation. Symptoms must be present for at least six months and be more severe than typical for the person's developmental level.
-        Age of Onset: Symptoms usually appear before the age of 12, and diagnosis typically occurs in childhood, though it can also be diagnosed in adulthood.
-        Differential Diagnosis: Other conditions such as anxiety, depression, learning disabilities, and sleep disorders must be ruled out.
-        4. Treatment
-        Medications:
-        Stimulants: The most common treatment, stimulants like methylphenidate (Ritalin) and amphetamines (Adderall) increase dopamine and norepinephrine levels in the brain.
-        Non-stimulants: Atomoxetine (Strattera) and guanfacine (Intuniv) are alternatives to stimulants.
-        Behavioral Therapy:
-        Focuses on managing behaviors, improving organizational skills, and addressing social difficulties.
-        Parent training and classroom interventions are often part of the therapy for children.
-        Psychotherapy:
-        Cognitive Behavioral Therapy (CBT) can help individuals manage symptoms by changing negative thought patterns and behaviors.
-        Lifestyle Changes:
-        Regular exercise, a balanced diet, sufficient sleep, and structured routines can help manage symptoms.
-        Mindfulness and relaxation techniques may reduce stress and improve focus.
-        5. ADHD in Adults
-        Adults with ADHD may have difficulty with time management, organization, setting goals, and maintaining relationships.
-        Symptoms may lead to challenges at work, in social situations, and in personal relationships.
-        Treatment for adults often involves a combination of medication and behavioral strategies tailored to their specific challenges.
-        6. Living with ADHD
-        Support Systems: Support from family, friends, educators, and mental health professionals is crucial.
-        Educational Accommodations: Individuals with ADHD may benefit from special accommodations in school, such as extended time on tests or breaks during tasks.
-        Workplace Accommodations: Adjustments like flexible scheduling, task management tools, and a quiet workspace can help.
-        Coping Strategies: Organizational tools, reminders, breaking tasks into smaller steps, and positive reinforcement can help manage daily challenges.
-        7. Research and Future Directions
-        Ongoing research is focused on better understanding the underlying causes of ADHD, improving diagnostic tools, and developing more effective treatments.
-        The role of genetics, brain imaging, and new medications are key areas of study.
-        ADHD is a complex condition that varies widely among individuals. With proper treatment and support, people with ADHD can lead successful, fulfilling lives.</p>
-        
-      </section>
-      
-      <!-- <hr> -->
+
+        <strong>What it is</strong>
+        <br><br>
+        ADHD is one of the most common neurodevelopmental disorders of childhood. It is usually first diagnosed in
+        childhood and often lasts into adulthood. Children with ADHD may have trouble paying attention, controlling
+        impulsive behaviors (may act without thinking about what the result will be), or be overly active.<br><br>
+        <strong>types</strong><br><br>
+        There are three different ways ADHD presents itself, depending on which types of symptoms are strongest in the
+        individual at the time of diagnosis:
+
+        Predominantly inattentive presentation
+        Predominantly hyperactive-impulsive presentation
+        Combined presentation (a combination of inattentive and hyperactive-impulsive symptoms)<br><br>
+        Signs and symptoms<br><br>
+        It is normal for children to have trouble focusing and behaving at one time or another. However, for children with ADHD, the symptoms continue, can be severe, and can cause difficulty at school, at home, or with friends.<br><br>
+        Diagnosis<br><br>
+        Deciding if someone has ADHD is a process with several steps. There is no single test to diagnose ADHD, and many other problems, such as anxiety, depression, sleep problems, and certain types of learning disabilities, can have similar symptoms. One step of the process involves having a medical exam, including hearing and vision tests, to rule out other problems with symptoms like ADHD.<br><br>Treatment and managing symptoms
+        <br><br>In most cases, ADHD is best treated with a combination of behavior therapy and medication. For preschool-aged children (4-5 years of age) with ADHD, behavior therapy, particularly training for parents, is recommended as the first line of treatment before medication is tried. What works best can depend on the child and family. Effective treatment plans will include close monitoring, follow-ups, and making changes, if needed, along the way.
+        <br><br>Managing symptoms: Staying healthy
+        <br><br>Being healthy is important for everyone and can be especially important for people with ADHD. In addition to behavioral therapy and medication, having a healthy lifestyle can make it easier to deal with ADHD symptoms. Here are some healthy behaviors that may help:
+
+        Developing healthy eating habits such as eating plenty of fruits, vegetables, and whole grains and choosing lean protein sources
+        Participating in daily physical activity based on age
+        Limiting the amount of daily screen time from TVs, computers, phones, and other electronics
+        Getting the recommended amount of sleep each night based on age
+        <br><br>What CDC is doing
+        <br><br>The Centers for Disease Control and Prevention (CDC) funds the National Resource Center on ADHD (NRC), a program of CHADD–Children and Adults with Attention-Deficit/Hyperactivity Disorder. Their website has links to information for people with ADHD and their families. The NRC operates a call center (1-866-200-8098) with trained staff to answer questions about ADHD.
+        <br><br>Resources and tools
+        <br><br>To get help with concerns about ADHD, talk with your child's healthcare provider. Primary healthcare providers may diagnose ADHD or may provide a referral to a mental health professional such as a psychologist or psychiatrist. Children can be seen by a specialist such as a child psychologist, child psychiatrist, or developmental pediatrician.
+        <br><br><strong>how an adhd person deals through everyday task</strong>
+        <br>A person with ADHD often navigates everyday tasks with challenges related to focus, organization, and time management. They might struggle to prioritize tasks, get easily distracted, or feel overwhelmed by multiple responsibilities. Simple routines can require extra effort, as their mind may jump from one thought to another, leading to incomplete tasks or procrastination. Despite these challenges, many people with ADHD develop coping strategies, like breaking tasks into smaller steps, using reminders, or creating structured routines to manage their day more effectively.
+        <div>
+        <video width="640" height="360" controls>
+          <source src="../../static/ADHD Simulator - What It Feels Like To Have ADHD.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
     </div>
+      </p>
+      <canvas id="prevalenceChart" width="800" height="400"></canvas>
+    </section>
+
+    <!-- <hr> -->
+  </div>
+  <script>
+    const data = {
+      labels: [2000, 2002, 2004, 2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020],
+      datasets: [{
+        label: 'Combined Prevalence per 1,000 Children',
+        data: [6, 6, 8, 9, 11, 14, 14, 16, 18, 23, 27],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.7)',
+          'rgba(54, 162, 235, 0.7)',
+          'rgba(255, 206, 86, 0.7)',
+          'rgba(75, 192, 192, 0.7)',
+          'rgba(153, 102, 255, 0.7)',
+          'rgba(255, 159, 64, 0.7)',
+          'rgba(199, 199, 199, 0.7)',
+          'rgba(83, 102, 255, 0.7)',
+          'rgba(40, 159, 64, 0.7)',
+          'rgba(210, 50, 132, 0.7)',
+          'rgba(120, 180, 20, 0.7)'
+        ],
+        borderColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 206, 86)',
+          'rgb(75, 192, 192)',
+          'rgb(153, 102, 255)',
+          'rgb(255, 159, 64)',
+          'rgb(199, 199, 199)',
+          'rgb(83, 102, 255)',
+          'rgb(40, 159, 64)',
+          'rgb(210, 50, 132)',
+          'rgb(120, 180, 20)'
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'Combined Prevalence per 1,000 Children by Surveillance Year'
+          }
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Surveillance Year'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Prevalence per 1,000 Children'
+            },
+            beginAtZero: true
+          }
+        }
+      },
+    };
+
+    window.onload = function () {
+      const ctx = document.getElementById('prevalenceChart').getContext('2d');
+      new Chart(ctx, config);
+    };
+  </script>
 </body>
+
 </html>

@@ -1,0 +1,356 @@
+.game_screen{
+    background-image : url("./backbround.jpg");
+    width: 100%;
+    height: 770px;
+    margin: auto;
+    /* margin-top: 2% ; */
+    text-align: left;
+    /* overflow:hidden; */
+}
+#mainMenu, #logIn{
+    margin-top: 15%;
+    display: inline-block;
+    border: 2px solid black;
+    background-color: rgba(55, 0, 255, 0.212);
+    width: 350px;
+    border-radius: 30px;
+}
+#howToPlay , #credits, #difficulty, #character{
+    margin-top: 10%;
+    font-size: 25px;
+    font-family: fantasy;
+    display: inline-block;
+    border: 2px solid black;
+    background-color: red;
+    background-color: rgba(55, 0, 255, 0.212);
+    size: 350px;
+    border-radius: 30px;
+    padding: 5px 20px;
+}
+#howToPlay{
+    margin-top: 20%;
+}
+
+#difficulty{
+    margin-top: 15%;
+    display: inline;
+}
+#difficulty input{
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+#mainMenu input{
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+#logIn input{
+    padding:5px;
+    font-size:20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.block{
+    height: 250px;
+    width: 300px;
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    display: inline-block;
+}
+#character img{
+    width: 200px;
+    height: 100px;
+    display: inline;
+    margin: 10px;
+    /* margin-top: 30px; */
+}
+#character img:hover{
+    opacity: 86%;
+}
+ul{
+    padding: 5px;
+}
+li{
+    list-style-type: none;
+}
+h1{
+    color: wheat;
+}
+
+.game_screen{
+    background-image : url("./backbround.jpg");
+    width: 100%;
+    height: 770px;
+    margin: auto;
+    text-align: left;
+    display: none;
+}
+body{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    background-image: url("./M3JDGa.jpg");
+    background-position: center,center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* overflow:hidden; */
+}
+.rails{
+    position: absolute;
+    width: 30px;
+
+}
+.rail1{
+    height: 150px;
+    margin-left: 30px;
+    margin-top: 50px;;
+}
+.rail2{
+    height: 50px;
+    margin-left: 100px;
+    margin-top: 270px;
+    transform: rotate(90deg);
+}
+.rail3{
+    height: 100px;
+    margin-left: 105px;
+    margin-top: 175px;
+    transform: rotate(90deg);
+}
+.rail4{
+    height: 220px;
+    margin-left: 150px;
+    margin-top: 319px;
+}
+.rail5{
+    height: 120px;
+    margin-left: 250px;
+    margin-top: 524px;
+    transform: rotate(90deg);
+}
+
+.rail6{
+    height: 90px;
+    margin-left: 200px;
+    margin-top: 90px;
+    /* transform: rotate(90deg); */
+}
+.rail7{
+    height: 180px;
+    position: absolute;
+     left:335px;
+     top: -45px;
+    transform: rotate(90deg);
+}
+
+.rail8{
+    height: 260px;
+    position: absolute;
+     left:605px;
+     top: -85px;
+    transform: rotate(90deg);
+}
+.rail9{
+    height: 115px;
+    margin-left: 450px;
+    margin-top: 68px;
+}
+.rail10{
+    height: 115px;
+    margin-left: 760px;
+    margin-top: 68px;
+}
+.rail11{
+    height: 360px;
+    margin-left: 965px;
+    margin-top: -135px;
+    transform: rotate(90deg);
+}
+
+.rail12{
+    height: 170px;
+    margin-left: 260px;
+    margin-top: 210px;
+    transform: rotate(90deg);
+}
+.rail13{
+    height: 240px;
+    margin-left: 515px;
+    margin-top: 175px;
+    transform: rotate(90deg);
+    
+}
+
+.rail14{
+    height: 320px;
+    margin-left: 844px;
+    margin-top: 135px;
+    transform: rotate(90deg);
+}
+
+.rail15{
+    height: 120px;
+    margin-left: 370px;
+    margin-top: 310px;
+}
+.rail16{
+    height: 190px;
+    margin-left: 660px;
+    margin-top: 310px;
+}
+
+.turns{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+.turn1{
+    margin-top: 250px;
+    margin-left: 30px;
+}
+.turn2{
+    margin-top: 180px;
+    margin-left: 170px;
+}
+.turn3{
+    margin-top: 30px;
+    margin-left: 200px;
+}
+.turn4{
+    margin-top: 539px;
+    margin-left: 149px;
+}
+.switchs{
+    position: absolute;
+    height: 50px;
+    width: 50px; 
+    z-index:1;   
+}
+.switch1{
+    margin-top: 200px;
+    margin-left: 20px;
+}
+.switch2{
+    margin-top: 270px;
+    margin-left: 140px;
+}
+.switch3{
+    margin-top: 20px;
+    margin-left: 440px;
+}
+.switch4{
+    margin-top: 20px;
+    margin-left: 750px;
+}
+.switch5{
+    margin-top: 270px;
+    margin-left: 360px;
+}
+
+.switch6{
+    margin-top: 270px;
+    margin-left: 650px;
+}
+
+
+
+.station{
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    z-index: 10000;
+}
+.station1{
+    position: absolute;
+    top:120px;
+    left:410px;
+}
+.station2{
+    position: absolute;
+    top:125px;
+    left:705px;
+}
+.station3{
+    position: absolute;
+    top:-5px;
+    left:1080px;
+}
+.station4{
+    position: absolute;
+    top:370px;
+    left:320px;
+}
+
+.station5{
+    position: absolute;
+    top:450px;
+    left:620px;
+}
+.station6{
+    position: absolute;
+    top:225px;
+    left:960px;
+}
+
+.station7{
+    position: absolute;
+    top:525px;
+    left:270px;
+}
+.start{
+    position: absolute;
+    width: 53px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    z-index: 70;
+}
+.train{
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    margin-top: 22px;
+    margin-bottom: 50px;
+    margin-left: 35px;
+    margin-right: 50px;
+    z-index: 10;
+}
+   
+
+#player-info{
+    position: absolute;
+        bottom: 30px;
+        right: 25px;
+        /* width:350px; */
+        height: 150px;
+        border: 3 solid gray;
+        box-shadow: 0px 0px 30px  yellowgreen;
+        opacity: .5;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+}
+#player-info:hover{
+    opacity: 1;
+}
+#characterDiv{
+    text-align: center;
+    padding: 15px;
+    height: 150px;
+}
+#characterDiv img{
+    margin-bottom:20px;
+}
+
+#scoreDiv{
+    text-align: center;
+    padding: 35px;
+    height: 150px;
+}
+.red-placeholder::-webkit-input-placeholder {
+    color: red;
+ }

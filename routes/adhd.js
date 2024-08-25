@@ -25,4 +25,7 @@ router.get('/puzzle', (req, res) => {
 router.get('/map', (req, res) => {
     res.render("adhd/adhd-map")
 })
+router.get('/game1', (req, res) => {
+    res.render("adhd/adhd-game1")
+})
 module.exports = router
